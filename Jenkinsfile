@@ -13,16 +13,22 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Your build commands or scripts
+                   // Your build commands or scripts
                     echo 'Building the artifact...'
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                // Deploy the artifact to a production environment
+            }
+        }
+
     }
 
     post {
         success {
-            echo 'Build successful! Add additional post-build steps here.'
-        }
+            echo 'Deploy successful!'
+             }
     }
 }
