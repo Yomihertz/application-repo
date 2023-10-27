@@ -21,14 +21,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy the artifact to a production environment
+                 echo 'Deploy successful!'
             }
         }
 
     }
 
-    post {
-        success {
-            echo 'Deploy successful!'
-             }
     }
-}
